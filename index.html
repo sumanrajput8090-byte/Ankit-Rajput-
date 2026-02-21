@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfolio | Ankit Rajput</title>
+
+<style>
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --blue: #3b82f6;
+  --green: #22c55e;
+  --border: #1f2933;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Header (Amazon-like top bar) */
+header {
+  background: #020617;
+  border-bottom: 1px solid var(--border);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-left {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--green);
+}
+
+.nav-right a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.nav-right a:hover {
+  color: var(--blue);
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.profile-pic {
+  width: 100%;
+  border-radius: 10px;
+  background: #111;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.sidebar h2 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.sidebar p {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Main Content */
+main section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+section h3 {
+  color: var(--blue);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.skill {
+  background: #020617;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.project, .job {
+  margin-bottom: 12px;
+}
+
+.project a, .contact a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.project a:hover, .contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    order: -1;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="navbar">
+    <div class="nav-left">Ankit Rajput</div>
+    <div class="nav-right">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="profile-pic">Photo Placeholder</div>
+    <h2>Ankit Rajput</h2>
+    <p> </p>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- About -->
+    <section id="about">
+      <h3>About</h3>
+      <p>
+        I am Ankit. I am currently in 12th grade. I want to leave this country.
+I want to go to Japan. I love watching anime. My favourite anime is One Piece. My favourite character is Osamu Dazai from bongou stray dogs.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h3>Skills</h3>
+      <div class="skills-grid">
+        <div class="skill">English</div>
+        <div class="skill">A little bit of python</div>
+        <div class="skill">A little bit of MYSQL</div>
+        <div class="skill">A little bit of Excel</div>
+        <!-- Add more -->
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h3>None</h3>
+      <div class="job">
+        <strong>  </strong><br />
+        <span class="muted">  </span>
+        <p> </p>
+      </div>
+      <!-- Add more roles -->
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h3>None</h3>
+      <div class="project">
+        <strong>. </strong><br />
+        <p> </p>
+        <a href="#" target="_blank"> </a>
+      </div>
+      <!-- Add more projects -->
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:ankitrajput@gmail.com">ankitrajput@gmail.com</a></p>
+      <p>GitHub: <a href="#" target="_blank">github.com/ankitrajput</a></p>
+      <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/ankitrajput</a></p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  © 2026 ankitrajput. All rights reserved.
+</footer>
+
+</body>
+  </html>
